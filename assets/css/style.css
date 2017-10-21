@@ -73,6 +73,10 @@ textarea {
     /*vertical-align: middle; Why doesn't this work???*/
 }
 
+.mainLink{
+  text-decoration: none;
+}
+
 .navBar {
   margin-bottom: 50px;
   float: left;
