@@ -1,64 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My First Website</title>
 
-  <head>
-    <meta charset="utf-8">
-    <title>Basic Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/bootstraptheme.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
 
 
-  <body>
-    <!-- Top Navbar Section -->
-    <header class="navBar">
-      <div class="navBarMain">
-        <div class="name">
-          <a class="mainLink" href="index.html"><h1>Dan Moss</h1></a>
-        </div>
-        <div class="navBarRight">
-          <a href="contact.html" target="_blank">Contact</a>
-        </div>
-        <div class="navBarRight">
-          <a href="portfolio.html" target="_blank">Portfolio</a>
-        </div>
-        <div class="navBarRight">
-          <a href="about.html" target="_blank">About</a>
-        </div>
-      </div>
-    </header>
-
-    <!-- Middle Section with content and "Connect with me section" on the right -->
-    <section class="middleArea">
-      <div class="mainContent">
-        <div class="aboutMeMain">
-          <h2>About Me</h2>
-        </div>
-
-        <img src="assets/images/me.png" alt="" class="image">
-        <p>My name is Dan Moss and I'm and aspiring web developer.  I was born and raised in Cleveland Ohio and I love this area.  I went to The Ohio State University and lived in Columbus, Ohio for five years.  I now live and work in northeast Ohio.
-          <br>
-          <br>
-          I work in IT and enjoy pretty much everthing tech related.  I'm also a big fan of Cleveland sports.  I do like to get outside every now and then and enjoy snowboarding in the winter.  I don't have much else to say but I want to make sure my text is wrapping around my image so I am going to continue to type.  Hopefully this works.  Perhaps I'll change this later.  Perhaps not.
-        </p>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dan Moss</a>
       </div>
 
-      <div class="sideBar">
-        <div class="connectText">
-            <h3>Connect With Me</h3>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">About</a></li>
+          <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+          <li><a href="contact.html" target="_blank">Contact</a></li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="about-me">
+          <h1>About Me</h1>
         </div>
 
-        <a href="https://github.com/dmoss215" target="_blank"><img src="assets/images/social-github.png" alt="Github"></a>
-        <a href="https://www.linkedin.com/in/daniel-moss-72a09099/" target="_blank"><img src="assets/images/linkedin-4-64.png" alt="LinkdIn" style="margin-right: 5px;"></a>
-        <a href="https://stackoverflow.com/users/8467869/dmoss215" target="_blank"><img src="assets/images/stackoverflow-4-64.png" alt="Stackoverflow"></a>
-      </div>
-    </section>
+        <div class="about-me-content">
+          <div class="my-picture">
+            <img src="assets/img/me.png" alt="">
+          </div>
+          <div class="about-me-text">
+            <p>
+              My name is Dan Moss and I'm and aspiring web developer. I was born and raised in Cleveland Ohio and I love this area. I went to The Ohio State University and lived in Columbus, Ohio for five years. I now live and work in northeast Ohio. <br> <br> I work in IT and enjoy pretty much everthing tech related. I'm also a big fan of Cleveland sports. I do like to get outside every now and then and enjoy snowboarding in the winter. I don't have much else to say but I want to make sure my text is wrapping around my image so I am going to continue to type. Hopefully this works. Perhaps I'll change this later. Perhaps not.
+            </p>
+          </div>
 
-    <!-- Footer Section -->
-    <section>
-      <div class="footer">
-        Copyright 2017 Dan Moss
-      </div>
-    </section>
+        </div>
 
-  </body>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Connect With Me</h3>
+          </div>
+          <div class="panel-body">
+            <a href=""><img src="assets/img/social-github.png" alt=""></a>
+            <a href=""><img src="assets/img/linkedin-4-64.png" alt=""></a>
+            <a href=""><img src="assets/img/stackoverflow-4-64.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div class="my-footer">
+          <div class="footer-text">
+            <p>Copyright 2017 Dan Moss</p>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
+  <div class="row main-footer">
+    <footer class="navbar-default navbar-fixed-bottom">
+      <div class="container-fluid">
+        <span>Copyright Dan Moss 2017</span>
+      </div>
+    </footer>
+  </div>
+
+  </div>
+
+
+
+
+</body>
 </html>
