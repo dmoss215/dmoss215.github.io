@@ -1,0 +1,55 @@
+
+
+h1 {
+  height: 100%;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 40px;
+  color: #323b3b;
+}
+
+
+.title-bar {
+  padding-left: 175px;
+  text-align: center;
+  background-color: #75b5ec;
+}
+
+.info-bar {
+  font-size: 24px;
+  font-family: 'Jura', sans-serif;
+}
+
+.game-box {
+  font-family: 'Jura', sans-serif;
+  margin-top: 100px;
+}
+
+.game-box-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.current-word {
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 75px;
+  margin-top: 50px;
+}
+
+.games-remaining {
+  text-align: right;
+}
+
+.start-button {
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.letters-guessed {
+  font-family: 'Jura', sans-serif;
+  text-align: center;
+  font-size: 28px;
+}

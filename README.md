@@ -1,2 +1,1 @@
-# bootstrap-portfolio
-homework #2
+# hangman-game
