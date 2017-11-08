@@ -1,61 +1,75 @@
+$(document).ready(function() {
 
-function newGame(){
+  var wins = 0;
+  var losses = 0;
+  var gemNum1, gemNum2, gemNum3, gemNum4, yourNum, magicNum;
 
-var techCo = ["amazon", "google", "microsoft", "twitter", "facebook", "instagram", "veeam", "cisco", "intel", "apple"]
-//Choose random string from tvShows array
-var randNum = Math.floor(Math.random() * techCo.length);
-var randCo = techCo[randNum];
-var lettersInCompany = Array.from(randCo);
-var underscores = [];
-console.log(randNum);
-console.log(randCo);
-console.log(lettersInCompany);
-var guessesRemaining = 10;
-var wrongGuess = []
+// ============== Function to reset game ========================================================
+function resetGame() {
+  gemNum1 = gemNum();
+  gemNum2 = gemNum();
+  gemNum3 = gemNum();
+  gemNum4 = gemNum();
+  yourNum = 0;
+  magicNum = getRandomInt();
+}
 
-//create underscore based on legth of the techCo
-function createUnderscores() {
-  for (var i = 0; i < randCo.length; i++) {
-    underscores.push('_');
+// =============== Functions to generate random numbers ============================================
+  function getRandomInt() {
+    return Math.floor(Math.random() * (102)) + 19;
+  }
+
+  function gemNum() {
+    return Math.floor(Math.random() * (12)) + 1;
+  }
+
+// ================= Generate the random number and put it into "magic-number" div ==============================
+  $('.new-game').on('click', function() {
+    resetGame();
+    $('.magic-number').text('Magic Number:' + " " + magicNum);
+    $('#wins').text('You have won:' + wins);
+    $('#losses').text('You have lost:' + losses);
+  });
+
+
+// ============== When a gem is clicked, get variable for that number gem and add it to total number ========
+  $('#one').on('click', function(){
+    yourNum = yourNum + gemNum1;
+    $('#totalNum').text(yourNum);
+    winOrLose();
+  })
+
+  $('#two').on('click', function(){
+    yourNum = yourNum + gemNum2;
+    $('#totalNum').text(yourNum);
+    winOrLose();
+  })
+
+  $('#three').on('click', function(){
+    yourNum = yourNum + gemNum3;
+    $('#totalNum').text(yourNum);
+    winOrLose();
+  })
+
+  $('#four').on('click', function(){
+    yourNum = yourNum + gemNum4;
+    $('#totalNum').text(yourNum);
+    winOrLose();
+  })
+
+// ======= If to add Wins and Losses =================================================
+
+function winOrLose() {
+  if (magicNum == yourNum) {
+    wins++;
+    $('#totalNum').text('You Win!!');
+    $('#wins').text('Wins:' + wins);
+    console.log('you win!');
+  } else if (yourNum > magicNum) {
+    losses++;
+    $('#totalNum').text('You Lose!!');
+    $('#losses').text('Losses:' + losses);
   }
 }
 
-//createUnderscores();
-  createUnderscores();
-console.log(underscores);
-console.log(underscores.join(' '));
-
-//Start new game when new game button is pressed and insert underscores to represent the randCo string
-  document.getElementById('wrong-letters').innerHTML = "<p>  </p>"
-  document.getElementById('randomShow').innerHTML = "<div>"+underscores.join(' ')+"</div>";
-  document.getElementById('games-remaining').innerHTML = "<p>Guesses:</p>" + guessesRemaining;
-
-  //Get the key pressed by the user
-  document.onkeyup = function(event) {
-    var letterPressed = event.key;
-
-    console.log(letterPressed);
-
-    //if the letter pressed matches a letter in lettersInCompany, replace the letter in underscores
-
-    if (lettersInCompany.indexOf(letterPressed) > -1 ) {
-      for (var i = 0; i < underscores.length; i++) {
-        if (lettersInCompany[i] == letterPressed) {
-          underscores[i] = letterPressed;
-          document.getElementById('randomShow').innerHTML = underscores.join(' ');
-        }
-      }
-    } else {
-      guessesRemaining--;
-      wrongGuess.push(letterPressed);
-      document.getElementById('games-remaining').innerHTML = "<p>Guesses:</p>" + guessesRemaining;
-      document.getElementById('wrong-letters').innerHTML = wrongGuess
-    }
-
-    if (guessesRemaining == 0) {
-      document.getElementById('randomShow').innerHTML = "YOU LOSE!"
-    }
-
-  }
-
-}
+});

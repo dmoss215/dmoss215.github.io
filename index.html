@@ -4,86 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hangman Game</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet"> <!--font-family: 'Julius Sans One', sans-serif;-->
-  <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">  <!--font-family: 'Jura', sans-serif;-->
-
+  <title>Crystals Game</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">  <!-- font-family: 'Permanent Marker', cursive; -->
 </head>
 
+
 <body>
-
   <div class="container">
-  <!-- <div class="row">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container title-bar">
-        <h1>Hangman Game</h1>
+    <div class="jumbotron">
+      <div class="title">
+        <h1>Crystals Game</h1>
       </div>
-    </nav>
-  </div> -->
-
-    <div class="row title-bar">
-
-      <div class="col-md-9">
-        <div class="">
-          <h1>Hangman Game</h1>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <button class="btn btn-default start-button" onclick="newGame()" type="submit">New Game</button>
-      </div>
-
-    </div>
-
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="wins info-bar" id="wins">
-          <p>Wins:</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="games-remaining info-bar" id="games-remaining">
-          <p>Guesses:</p>
-        </div>
+      <div class="new-game">
+        <button class="btn btn-lg my-btn">
+          New Game
+        </button>
       </div>
     </div>
 
     <div class="row">
 
+      <div class="col-md-8">
+        <div class="magic-number">
+          Click "New Game" to Get Your Number
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="wins-losses">
+          <p id="wins">Wins:</p>
+          <br>
+          <p id="losses">Losses:</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
       <div class="col-md-12">
-        <div class="game-box">
-          <div class="game-box-title">
-            <p>Tech Giant:</p>
-
-          </div>
-          <div class="current-word" id="randomShow">
-            <p> </p>
-          </div>
+        <div class="gems">
+          <img id="one" src="assets/img/gem1.jpg" alt="">
+          <img id="two" src="assets/img/gem3.jpg" alt="">
+          <img id="three" src="assets/img/gem4.jpg" alt="">
+          <img id="four" src="assets/img/gem5.jpg" alt="">
         </div>
       </div>
-
     </div>
 
     <div class="row">
-      <div class="letters-guessed">
-        <p>letters guessed</p>
-        <p id="wrong-letters"></p>
+      <div class="your-score">
+        <p>Your Total Score Is: </p>
+        <br>
+        <p id="totalNum">0</p>
       </div>
-
     </div>
 
-    </div>
 
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
