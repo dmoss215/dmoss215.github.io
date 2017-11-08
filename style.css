@@ -2,6 +2,7 @@ h1 {
   font-family: 'Permanent Marker', cursive;
   text-align: center;
   color: #c9c9ff;
+  margin-top: 0px;
 }
 
 .magic-number {
@@ -42,4 +43,28 @@ h1 {
 
 .my-btn {
   background-color: #7fb8e5;
+}
+
+/* More info animation===========================================================*/
+.slide {
+  background-color: #7fb8e5;
+}
+
+.box {
+  display: block;
+  background: 	#e1f7d5;
+}
+
+#fade-in {
+  height: 50px;
+  width: 100%;
+  opacity: 0;
+  transition: all .95s ease;
+}
+
+#fade-in.show {
+  font-size: 18px;
+  opacity: 1;
+  height: 50px;
+  width: 100%;
 }
