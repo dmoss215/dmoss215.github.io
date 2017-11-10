@@ -1,1 +1,2 @@
-# week-4-game
+# bootstrap-portfolio
+homework #2
